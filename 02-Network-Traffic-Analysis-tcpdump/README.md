@@ -57,4 +57,4 @@ The packet trace clearly establishes the stateful connection lifecycle between c
 * Reconnaissance & Threat Detection: Understanding normal TCP flag progression is vital for Security Operations Center (SOC) analysts. Analyzing flag    anomalies helps distinguish legitimate traffic from port scans (such as SYN stealth scans) or SYN flood Denial-of-Service attempts.** Encrypted vs.  Unencrypted Exposure: Cleartext protocols (HTTP on port 80) expose application headers and payload data directly to packet sniffers. Network perimeters must enforce TLS/HTTPS encryption across enterprise environments.
 * Command-Line Incident Triage: Mastery of ⁠tcpdump⁠ allows rapid packet troubleshooting and incident triage directly on edge devices, firewalls, and Linux servers without requiring a GUI.
 ## 6. Project Artifacts
-*📄**Full Raw Capture File:**[View PDF Report](tcpdump _traffic _analysis.pdf)
+* 📄 **Full Raw Capture File:** [View PDF Report](https://github.com/yaserisam002-art/Google-cybersecurity-portfolio/blob/main/02-Network-Traffic-Analysis-tcpdump/tcpdump%20_traffic%20_analysis.pdf)
