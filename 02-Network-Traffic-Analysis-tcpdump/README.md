@@ -42,6 +42,7 @@ The packet trace clearly establishes the stateful connection lifecycle between c
 ## 4. Log Inspection Snippet
 
 ```text
+
 14:18:32.192571 IP your.machine.52444 > dns.google.domain: 35084+ A? yummyrecipesforme.com. (24)
 14:18:32.204388 IP dns.google.domain > your.machine.52444: 35084 1/0/0 A 203.0.113.22 (40)
 
@@ -49,3 +50,11 @@ The packet trace clearly establishes the stateful connection lifecycle between c
 14:18:36.786517 IP yummyrecipesforme.com.http > your.machine.36086: Flags [S.], seq 3984334959, ack 2873951609...
 14:18:36.786529 IP your.machine.36086 > yummyrecipesforme.com.http: Flags [.], ack 1, win 512...
 14:18:36.786589 IP your.machine.36086 > yummyrecipesforme.com.http: Flags [P.], seq 1:74, ack 1: HTTP: GET / HTTP/1.1
+
+```
+
+## 5. Security & Defensive Takeaways
+* Reconnaissance & Threat Detection: Understanding normal TCP flag progression is vital for Security Operations Center (SOC) analysts. Analyzing flag    anomalies helps distinguish legitimate traffic from port scans (such as SYN stealth scans) or SYN flood Denial-of-Service attempts.** Encrypted vs.  Unencrypted Exposure: Cleartext protocols (HTTP on port 80) expose application headers and payload data directly to packet sniffers. Network perimeters must enforce TLS/HTTPS encryption across enterprise environments.
+* Command-Line Incident Triage: Mastery of ⁠tcpdump⁠ allows rapid packet troubleshooting and incident triage directly on edge devices, firewalls, and Linux servers without requiring a GUI.
+## 6. Project Artifacts
+*📄**Full Raw Capture File:**[View PDF Report](./tcpdump_traffic_analysis.pdf)
